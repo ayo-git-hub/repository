@@ -8,13 +8,41 @@
                 width: 600px;
                 height: auto;
             }
+
+            h1 {
+                color:cadetblue
+            }
         </style>
-        
+
     </head>
     <body>
         <h1>hammerhacks website</h1>
         <p>i love html</p>
 
         <img src="https://i0.wp.com/moparinsiders.com/wp-content/uploads/2023/08/Snapinsta.app_361655965_18375738844034678_86440378232136834_n_1080.jpeg?fit=1080%2C608&ssl=1"
+    
+        <blockquote>"hellcat whine is my favorite sound" -Anonymous</blockquote>
+        <button onclick="changeQuote()">Change quote</button>
+    
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"I really like web development" -Dave Smith Hayes`
+                    `"I want dodge challenger srt hellcat redeye widebody" -me`
+                    `"hello" -anonymous`
+                    `"a random quote" -h`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+            }
+        </script>
     </body>
 </html>
